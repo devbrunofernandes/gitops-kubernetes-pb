@@ -76,7 +76,7 @@ Use o comando para testar se a conexão SSH foi estabelecida:
 
 Nessa etapa o objetivo é criar o repositório privado no Github, contendo o arquivo .yaml manifesto do Kubernetes com nossa aplicação *Online Boutique*, primeiramente precisamos baixar o manifesto.
 
-Link para o manifesto Kubernetes da aplicação: https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/release/kubernetes-manifests.yaml
+Manifesto Kubernetes da aplicação: [manifesto kubernetes](manifesto-utilizado/kubernetes-manifests.yaml)
 
 Então com o arquivo manifesto em mãos vamos criar o repositório, na pagina principal do Github (https://github.com), clique no botão verde escrito **New** no canto esquerdo da página. Isso vai abrir a tela de criação de repositório. No campo **Repository name** escreva **gitops-microservices** e na opção **Choose visibility** marque **Private**. Ao final clique em **Create repository**.
 
@@ -98,8 +98,6 @@ Após executes os seguintes comandos Git só substituindo as informações neces
     git branch -M main
     git remote add origin <URL_DO_SEU_REPOSITORIO>
     git push -u origin main
-
-<!-- Ao final da execução dos comandos, o Git pedirá pelas suas credenciais do Github, primeiro escreva o *username* normalmente e depois disso ele vai pedir por uma senha, ela precisa vir de um token disponibilizado pelo próprio Github. -->
 
 Pronto, após isso o commit com nosso arquivo foi feito no repositório remoto do Github, lembrando que para esse método a chave SSH precisa já estar conectada no computador com o Github.
 
