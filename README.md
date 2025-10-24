@@ -46,7 +46,6 @@ Tendo feito isso o ambiente está pronto e configurado para seguirmos para as pr
 ## 🐙🐈‍⬛ Configurando o GitHub
 Para prosseguir é preciso ter uma conta no Github, caso não tenha se cadastre clicando em [Github.](https://github.com/signup?source=form-home-signup&user_email=)
 
-<a id="ancora-ssh-github"></a>
 ### Conectando chave SSH no Github
 Para gerar a chave que usaremos para autentificação no Github execute o seguinte comando no terminal:
 
@@ -81,7 +80,7 @@ Link para o manifesto Kubernetes da aplicação: https://github.com/GoogleCloudP
 
 Então com o arquivo manifesto em mãos vamos criar o repositório, na pagina principal do Github (https://github.com), clique no botão verde escrito **New** no canto esquerdo da página. Isso vai abrir a tela de criação de repositório. No campo **Repository name** escreva **gitops-microservices** e na opção **Choose visibility** marque **Private**. Ao final clique em **Create repository**.
 
-![Imagem da tela de criação do repositório](images/repositorio.png)
+<img width="1812" height="1100" alt="repositorio" src="https://github.com/user-attachments/assets/6311e60a-9458-4094-bb96-3895bc6ca184" />
 
 Agora precisamos fazer o upload do arquivo manifesto Kubernetes dentro do repositório recém criado, isso pode ser feito via interface gráfica do próprio Github ou via Git que tem CLI e GUI. Nesse documento vou demostrar como fazer o commit do arquivo via Git CLI (se preferir fazer via Github pode pular para a proxima etapa).
 
@@ -153,7 +152,7 @@ Com isso o ArgoCD já está acessivel, porém para autentificar nele precisamos 
 
 Após obtida a senha e a aplicação exposta, podemos acessar o ArgoCD via terminal ou via navegador com interface gráfica, para isso digite **localhost:8080** na barra de endereço do seu navegador. Como já foi comentado, ele vai pedir usuario e senha, o usuario por padrão é sempre *admin* e a senha já obtemos no passo anterior. Agora é só acessar e logar no ArgoCD.
 
-![Tela de login do ArgoCD](images/argocd-login.png)
+<img width="1827" height="947" alt="argocd-login" src="https://github.com/user-attachments/assets/9c17ee7a-47d8-4fab-96e1-333fc7f734a9" />
 
 Se autentique via terminal de linha de comando também, usa o mesmo usuario e senha, para isso digite o comando:
 
@@ -200,7 +199,7 @@ Ao clicar, vai abrir um formulário na tela para preencher com as informações 
 
 Ao terminar de selecionar todas essas opções, clique no botão de criar no topo da página. Pronto, a aplicação vai ser criada no ArgoCD, e automaticamente vai sincronizar com o estado do nosso repositório remoto no Github, e criar todos os elementos que estão declarados no manifesto. (o app vai ficar no estado de *progressing*, pois o manifesto exemplo usa um load balancer, e nós estamos testando em ambiente local, sem load balancer)
 
-![Frontend do ArgoCD exibindo a aplicação criada](images/argocd-app.png)
+<img width="1826" height="952" alt="argocd-app" src="https://github.com/user-attachments/assets/73c3e498-19eb-4965-9d9e-d36f9a8c8f54" />
 
 <br><br>
 
@@ -211,7 +210,7 @@ O serviço Frontend na nossa aplicação é um ClusterIP, isso significa que ele
 
 Simples assim, agora podemos acessar via navegador digitando: *localhost:8081* na barra de endereço.
 
-![Frontend do site Online Boutique](images/online-boutique.png)
+<img width="1812" height="952" alt="online-boutique" src="https://github.com/user-attachments/assets/d5ccdfbe-8212-4c68-a01d-6752a7fa86a6" />
 
 <br><br>
 
